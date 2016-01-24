@@ -12,3 +12,18 @@ C:\Users\Chris\documents\visual studio 2010\Projects\Kobt\Kobt\bin\Debug\Kobt.ex
 C:\Users\Chris\documents\visual studio 2010\Projects\Kobt\Kobt\bin\Debug\Kobt.application
 C:\Users\Chris\documents\visual studio 2010\Projects\Kobt\Kobt\obj\x86\Debug\Kobt.exe.manifest
 C:\Users\Chris\documents\visual studio 2010\Projects\Kobt\Kobt\obj\x86\Debug\Kobt.application
+C:\Users\Niki\Downloads\Kobt-master\Kobt-master\Kobt\Kobt\obj\x86\Debug\Kobt.exe
+C:\Users\Niki\Downloads\Kobt-master\Kobt-master\Kobt\Kobt\obj\x86\Debug\Kobt.xml
+C:\Users\Niki\Downloads\Kobt-master\Kobt-master\Kobt\Kobt\obj\x86\Debug\Kobt.pdb
+C:\Users\Niki\Downloads\Kobt-master\Kobt-master\Kobt\Kobt\bin\Debug\Kobt.exe.manifest
+C:\Users\Niki\Downloads\Kobt-master\Kobt-master\Kobt\Kobt\bin\Debug\Kobt.application
+C:\Users\Niki\Downloads\Kobt-master\Kobt-master\Kobt\Kobt\bin\Debug\Kobt.exe
+C:\Users\Niki\Downloads\Kobt-master\Kobt-master\Kobt\Kobt\bin\Debug\Kobt.pdb
+C:\Users\Niki\Downloads\Kobt-master\Kobt-master\Kobt\Kobt\bin\Debug\Kobt.xml
+C:\Users\Niki\Downloads\Kobt-master\Kobt-master\Kobt\Kobt\obj\x86\Debug\Kobt.Kobt.resources
+C:\Users\Niki\Downloads\Kobt-master\Kobt-master\Kobt\Kobt\obj\x86\Debug\Kobt.Resources.resources
+C:\Users\Niki\Downloads\Kobt-master\Kobt-master\Kobt\Kobt\obj\x86\Debug\Kobt.Timer.resources
+C:\Users\Niki\Downloads\Kobt-master\Kobt-master\Kobt\Kobt\obj\x86\Debug\Kobt.vbproj.GenerateResource.Cache
+C:\Users\Niki\Downloads\Kobt-master\Kobt-master\Kobt\Kobt\obj\x86\Debug\Kobt.exe.manifest
+C:\Users\Niki\Downloads\Kobt-master\Kobt-master\Kobt\Kobt\obj\x86\Debug\Kobt.application
+C:\Users\Niki\Downloads\Kobt-master\Kobt-master\Kobt\Kobt\bin\Debug\Kobt.exe.config

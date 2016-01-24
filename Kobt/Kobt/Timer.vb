@@ -40,12 +40,16 @@
         Label2.Text = DateAdd(DateInterval.Hour, i, TimeOfDay)
         Dim temp As Date = Label2.Text
         Dim temp2 As Date
-
+        Dim filename As String = TextBox1.Text
         temp2 = DateAdd(DateInterval.Minute, k, temp)
         Label2.Text = Format(temp2, "HH:mm:ss")
     End Sub
 
     Private Sub Button2_Click(sender As System.Object, e As System.EventArgs) Handles Button2.Click
         Label2.Text = "00:00:00"
+    End Sub
+
+    Private Sub Button3_Click_1(sender As Object, e As EventArgs) Handles Button3.Click
+        IO.File.WriteAllText("C:\users\niki\" + TextBox1.Text + ".txt", Label2.Text)
     End Sub
 End Class

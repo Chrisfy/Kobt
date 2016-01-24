@@ -8,14 +8,14 @@
     <framework targetVersion="4.0" profile="Full" supportedRuntime="4.0.30319" />
   </compatibleFrameworks>
   <dependency>
-    <dependentAssembly dependencyType="install" codebase="Kobt.exe.manifest" size="3021">
+    <dependentAssembly dependencyType="install" codebase="Kobt.exe.manifest" size="3395">
       <assemblyIdentity name="Kobt.exe" version="1.0.0.1" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="x86" type="win32" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>lal1gV6Uy3+J64BQ2CpZV9lcNhI=</dsig:DigestValue>
+        <dsig:DigestValue>Cu3QDhzltWOCXtk6mwu2Z6JNqoc=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

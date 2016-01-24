@@ -35,6 +35,7 @@ Partial Class Timer
         Me.Label5 = New System.Windows.Forms.Label()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.Label6 = New System.Windows.Forms.Label()
+        Me.Button3 = New System.Windows.Forms.Button()
         CType(Me.NumericUpDown1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.NumericUpDown2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -142,11 +143,21 @@ Partial Class Timer
         Me.Label6.TabIndex = 10
         Me.Label6.Text = "Boss Name:"
         '
+        'Button3
+        '
+        Me.Button3.Location = New System.Drawing.Point(14, 209)
+        Me.Button3.Name = "Button3"
+        Me.Button3.Size = New System.Drawing.Size(198, 23)
+        Me.Button3.TabIndex = 11
+        Me.Button3.Text = "Save"
+        Me.Button3.UseVisualStyleBackColor = True
+        '
         'Timer
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(226, 210)
+        Me.ClientSize = New System.Drawing.Size(226, 246)
+        Me.Controls.Add(Me.Button3)
         Me.Controls.Add(Me.Label6)
         Me.Controls.Add(Me.TextBox1)
         Me.Controls.Add(Me.Label5)
@@ -178,4 +189,5 @@ Partial Class Timer
     Friend WithEvents Label5 As System.Windows.Forms.Label
     Friend WithEvents TextBox1 As System.Windows.Forms.TextBox
     Friend WithEvents Label6 As System.Windows.Forms.Label
+    Friend WithEvents Button3 As System.Windows.Forms.Button
 End Class
