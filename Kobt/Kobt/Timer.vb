@@ -70,6 +70,10 @@ Public Class Timer
 
     End Sub
 
-    Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
+    Private Sub Button4_Click(sender As System.Object, e As System.EventArgs) Handles Button4.Click
+        If OpenFileDialog1.ShowDialog() = System.Windows.Forms.DialogResult.OK Then
+            TextBox1.Text = OpenFileDialog1.SafeFileName
+            Label2.Text = IO.File.ReadAllText(OpenFileDialog1.FileName)
+        End If
     End Sub
 End Class

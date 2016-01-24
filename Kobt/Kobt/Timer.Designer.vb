@@ -36,6 +36,8 @@ Partial Class Timer
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.Button3 = New System.Windows.Forms.Button()
+        Me.OpenFileDialog1 = New System.Windows.Forms.OpenFileDialog()
+        Me.Button4 = New System.Windows.Forms.Button()
         CType(Me.NumericUpDown1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.NumericUpDown2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -147,16 +149,30 @@ Partial Class Timer
         '
         Me.Button3.Location = New System.Drawing.Point(14, 209)
         Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(198, 23)
+        Me.Button3.Size = New System.Drawing.Size(98, 23)
         Me.Button3.TabIndex = 11
         Me.Button3.Text = "Save"
         Me.Button3.UseVisualStyleBackColor = True
+        '
+        'OpenFileDialog1
+        '
+        Me.OpenFileDialog1.FileName = "OpenFileDialog1"
+        '
+        'Button4
+        '
+        Me.Button4.Location = New System.Drawing.Point(122, 209)
+        Me.Button4.Name = "Button4"
+        Me.Button4.Size = New System.Drawing.Size(90, 23)
+        Me.Button4.TabIndex = 12
+        Me.Button4.Text = "Load"
+        Me.Button4.UseVisualStyleBackColor = True
         '
         'Timer
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(226, 246)
+        Me.Controls.Add(Me.Button4)
         Me.Controls.Add(Me.Button3)
         Me.Controls.Add(Me.Label6)
         Me.Controls.Add(Me.TextBox1)
@@ -190,4 +206,6 @@ Partial Class Timer
     Friend WithEvents TextBox1 As System.Windows.Forms.TextBox
     Friend WithEvents Label6 As System.Windows.Forms.Label
     Friend WithEvents Button3 As System.Windows.Forms.Button
+    Friend WithEvents OpenFileDialog1 As System.Windows.Forms.OpenFileDialog
+    Friend WithEvents Button4 As System.Windows.Forms.Button
 End Class
