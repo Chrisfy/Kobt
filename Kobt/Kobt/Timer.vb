@@ -74,6 +74,7 @@ Public Class Timer
         If OpenFileDialog1.ShowDialog() = System.Windows.Forms.DialogResult.OK Then
             TextBox1.Text = OpenFileDialog1.SafeFileName
             Label2.Text = IO.File.ReadAllText(OpenFileDialog1.FileName)
+            MessageBox.Show("Respawn Time is: " + Label2.Text, "Loaded Boss: " + TextBox1.Text, MessageBoxButtons.OK)
         End If
     End Sub
 End Class
