@@ -50,15 +50,26 @@ Public Class Timer
     End Sub
 
     Private Sub Button3_Click_1(sender As Object, e As EventArgs) Handles Button3.Click
+        Dim currentuser As String = Environment.UserName
+        Dim strFolder = "C:\users\" + currentuser + "\documents\kobt\"
         If String.IsNullOrEmpty(TextBox1.Text) Then
-            MessageBox.Show("Boss Name can't be empty!", "Empty Boss Name", MessageBoxButtons.OKCancel)
+            MessageBox.Show("Boss Name can't be empty!", "Empty Boss Name", MessageBoxButtons.OK)
         ElseIf String.IsNullOrWhiteSpace(TextBox1.Text) Then
-            MessageBox.Show("Boss Name can't be Space!", "Space as Boss Name", MessageBoxButtons.OKCancel)
+            MessageBox.Show("Boss Name can't be Space!", "Space as Boss Name", MessageBoxButtons.OK)
         Else
-            Dim currentuser As String = Environment.UserName
-            IO.File.WriteAllText("C:\users\" + currentuser + "\documents\kobt\" + TextBox1.Text + ".txt", Label2.Text)
-            MessageBox.Show("Saved as " + TextBox1.Text, "press ok", MessageBoxButtons.OKCancel)
+            If Not System.IO.Directory.Exists(strFolder) Then
+                System.IO.Directory.CreateDirectory(strFolder)
+                IO.File.WriteAllText("C:\users\" + currentuser + "\documents\kobt\" + TextBox1.Text, Label2.Text)
+                MessageBox.Show("Saved as " + TextBox1.Text, "press ok", MessageBoxButtons.OK)
+            Else
+                IO.File.WriteAllText("C:\users\" + currentuser + "\documents\kobt\" + TextBox1.Text, Label2.Text)
+                MessageBox.Show("Saved as " + TextBox1.Text, "press ok", MessageBoxButtons.OK)
+            End If
+
         End If
 
+    End Sub
+
+    Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
     End Sub
 End Class
