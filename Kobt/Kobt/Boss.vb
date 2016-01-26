@@ -46,10 +46,10 @@
             Button1.ForeColor = Color.Black
             MessageBox.Show(Label2.Text + a, "Run Bitch")
 
-            Dim dDiff As Date = Button2.Text
-            If DateDiff(DateInterval.Day, Date.Now, dDiff) >= 1 Then
-                Button2.BackColor = Color.Red
-            End If
+            'Dim dDiff As Date = Button2.Text
+            'If DateDiff(DateInterval.Day, TimeOfDay, dDiff) >= 1 Then
+            'Button2.BackColor = Color.Red
+            'End If
 
         End If
     End Sub

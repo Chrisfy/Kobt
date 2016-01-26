@@ -28,7 +28,8 @@ Public Class Timer
         Dim tray As New Boss
         tray.MdiParent = Kobt
         tray.Label2.Text = Me.TextBox1.Text
-        tray.Label1.Text = Me.Label2.Text
+        Dim traytime As Date = Label2.Text
+        tray.Label1.Text = Format(traytime, "HH:mm:ss")
         tray.Text = Me.TextBox1.Text
         tray.Button2.Text = Me.Label1.Text
         Me.Close()
