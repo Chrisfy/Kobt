@@ -36,6 +36,7 @@ Partial Class Timer
         Me.Button3 = New System.Windows.Forms.Button()
         Me.OpenFileDialog1 = New System.Windows.Forms.OpenFileDialog()
         Me.Label1 = New System.Windows.Forms.Label()
+        Me.Label4 = New System.Windows.Forms.Label()
         CType(Me.NumericUpDown1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.NumericUpDown2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -43,9 +44,9 @@ Partial Class Timer
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(161, Byte))
+        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.3!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(161, Byte))
         Me.Label2.ForeColor = System.Drawing.Color.LimeGreen
-        Me.Label2.Location = New System.Drawing.Point(112, 66)
+        Me.Label2.Location = New System.Drawing.Point(112, 65)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(98, 25)
         Me.Label2.TabIndex = 1
@@ -62,21 +63,22 @@ Partial Class Timer
         '
         'NumericUpDown1
         '
-        Me.NumericUpDown1.Location = New System.Drawing.Point(119, 41)
+        Me.NumericUpDown1.Location = New System.Drawing.Point(119, 39)
         Me.NumericUpDown1.Name = "NumericUpDown1"
-        Me.NumericUpDown1.Size = New System.Drawing.Size(38, 20)
+        Me.NumericUpDown1.Size = New System.Drawing.Size(36, 20)
         Me.NumericUpDown1.TabIndex = 4
         '
         'NumericUpDown2
         '
-        Me.NumericUpDown2.Location = New System.Drawing.Point(163, 41)
+        Me.NumericUpDown2.Location = New System.Drawing.Point(163, 39)
         Me.NumericUpDown2.Name = "NumericUpDown2"
-        Me.NumericUpDown2.Size = New System.Drawing.Size(38, 20)
+        Me.NumericUpDown2.Size = New System.Drawing.Size(36, 20)
         Me.NumericUpDown2.TabIndex = 5
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(16, 111)
+        Me.Button1.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Button1.Location = New System.Drawing.Point(16, 131)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(198, 23)
         Me.Button1.TabIndex = 6
@@ -85,7 +87,8 @@ Partial Class Timer
         '
         'Button2
         '
-        Me.Button2.Location = New System.Drawing.Point(16, 140)
+        Me.Button2.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Button2.Location = New System.Drawing.Point(16, 160)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(198, 23)
         Me.Button2.TabIndex = 7
@@ -109,7 +112,7 @@ Partial Class Timer
         '
         Me.TextBox1.Location = New System.Drawing.Point(119, 11)
         Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(82, 20)
+        Me.TextBox1.Size = New System.Drawing.Size(80, 20)
         Me.TextBox1.TabIndex = 9
         '
         'Label6
@@ -123,7 +126,8 @@ Partial Class Timer
         '
         'Button3
         '
-        Me.Button3.Location = New System.Drawing.Point(16, 169)
+        Me.Button3.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Button3.Location = New System.Drawing.Point(16, 189)
         Me.Button3.Name = "Button3"
         Me.Button3.Size = New System.Drawing.Size(200, 23)
         Me.Button3.TabIndex = 11
@@ -137,17 +141,28 @@ Partial Class Timer
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(9, 90)
+        Me.Label1.Font = New System.Drawing.Font("Verdana", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Location = New System.Drawing.Point(116, 95)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(53, 13)
+        Me.Label1.Size = New System.Drawing.Size(74, 17)
         Me.Label1.TabIndex = 12
         Me.Label1.Text = "1/1/2000"
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Location = New System.Drawing.Point(6, 99)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(61, 13)
+        Me.Label4.TabIndex = 13
+        Me.Label4.Text = "Date Killed:"
         '
         'Timer
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(226, 204)
+        Me.ClientSize = New System.Drawing.Size(226, 220)
+        Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.Button3)
         Me.Controls.Add(Me.Label6)
@@ -161,6 +176,7 @@ Partial Class Timer
         Me.Controls.Add(Me.Label2)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.Name = "Timer"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Timer"
         CType(Me.NumericUpDown1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.NumericUpDown2, System.ComponentModel.ISupportInitialize).EndInit()
@@ -181,4 +197,5 @@ Partial Class Timer
     Friend WithEvents Button3 As System.Windows.Forms.Button
     Friend WithEvents OpenFileDialog1 As System.Windows.Forms.OpenFileDialog
     Friend WithEvents Label1 As System.Windows.Forms.Label
+    Friend WithEvents Label4 As System.Windows.Forms.Label
 End Class

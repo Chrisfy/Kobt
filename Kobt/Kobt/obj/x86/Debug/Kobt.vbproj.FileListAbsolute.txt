@@ -42,3 +42,4 @@ C:\Users\Chris\Documents\GitHub\Kobt\Kobt\Kobt\obj\x86\Debug\Kobt.Timer.resource
 C:\Users\Chris\Documents\GitHub\Kobt\Kobt\Kobt\obj\x86\Debug\Kobt.vbproj.GenerateResource.Cache
 C:\Users\Chris\Documents\GitHub\Kobt\Kobt\Kobt\obj\x86\Debug\Kobt.exe.manifest
 C:\Users\Chris\Documents\GitHub\Kobt\Kobt\Kobt\obj\x86\Debug\Kobt.application
+C:\Users\Chris\Documents\GitHub\Kobt\Kobt\Kobt\obj\x86\Debug\Kobt.Boss.resources

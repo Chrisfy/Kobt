@@ -1,34 +1,17 @@
 Public Class Timer
 
+    Public flag As Boolean = False
     Private Sub Button3_Click(sender As System.Object, e As System.EventArgs)
         Me.Close()
     End Sub
 
     Private Sub Timer_Load(sender As System.Object, e As System.EventArgs) Handles MyBase.Load
+        MdiParent = Kobt
         Timer1.Start()
     End Sub
 
     Private Sub Timer1_Tick(sender As System.Object, e As System.EventArgs) Handles Timer1.Tick
-
-        '##old----Label1.Text = Format(TimeOfDay, "HH:mm:ss")
-        Dim t As Date = Label2.Text
-        Dim diff As Integer = DateDiff(DateInterval.Minute, t, TimeOfDay)
-        If diff = 5 Then
-            For z As Integer = 0 To 5
-                Console.Beep()
-            Next
-            MessageBox.Show(TextBox1.Text, " in 5 mins..")
-
-        End If
-
-        If (TimeOfDay = Label2.Text) Then
-            For x As Integer = 0 To 10
-                Console.Beep()
-            Next
-
-            MessageBox.Show(TextBox1.Text, " is respawning!")
-
-        End If
+        Label1.Text = Date.Now.ToString("MM/dd/yyyy")
 
 
     End Sub
@@ -39,9 +22,19 @@ Public Class Timer
         Label2.Text = DateAdd(DateInterval.Hour, i, TimeOfDay)
         Dim temp As Date = Label2.Text
         Dim temp2 As Date
-        Dim filename As String = TextBox1.Text
         temp2 = DateAdd(DateInterval.Minute, k, temp)
-        Label1.Text = TimeOfDay.Date
+        Label2.Text = temp2
+
+        Dim tray As New Boss
+        tray.MdiParent = Kobt
+        tray.Label2.Text = Me.TextBox1.Text
+        tray.Label1.Text = Me.Label2.Text
+        tray.Text = Me.TextBox1.Text
+        tray.Button2.Text = Me.Label1.Text
+        Me.Close()
+        tray.Show()
+
+
 
         Label2.Text = Format(temp2, "HH:mm:ss")
     End Sub
@@ -71,11 +64,4 @@ Public Class Timer
 
     End Sub
 
-    'Public Sub Button4_Click(sender As System.Object, e As System.EventArgs)
-    ' If OpenFileDialog1.ShowDialog() = System.Windows.Forms.DialogResult.OK Then
-    ' TextBox1.Text = OpenFileDialog1.SafeFileName
-    ' Label2.Text = IO.File.ReadAllText(OpenFileDialog1.FileName)
-    ' MessageBox.Show("Respawn Time is: " + Label2.Text, "Loaded Boss: " + TextBox1.Text, MessageBoxButtons.OK)
-    'End If
-    ' End Sub
 End Class

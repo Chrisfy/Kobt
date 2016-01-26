@@ -42,14 +42,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Kobt.exe" size="40960">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Kobt.exe" size="44544">
       <assemblyIdentity name="Kobt" version="1.0.0.0" language="neutral" processorArchitecture="x86" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>yleTyUrkJ88qvPk7JqgIMJNuNQQ=</dsig:DigestValue>
+        <dsig:DigestValue>qG02bQaop2sFwnTsgojel/0pnRg=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
