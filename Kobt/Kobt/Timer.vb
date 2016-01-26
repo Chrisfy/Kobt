@@ -10,24 +10,23 @@ Public Class Timer
 
     Private Sub Timer1_Tick(sender As System.Object, e As System.EventArgs) Handles Timer1.Tick
 
-        Label1.Text = Format(TimeOfDay, "HH:mm:ss")
-        'Dim t As Date = Label2.Text
-        'Dim diff As Integer = DateDiff(DateInterval.Minute, t, TimeOfDay)
-        'If (diff = 5) Then
-        'For z As Integer = 0 To 5
-        'Console.Beep()
-        'Next
-        'MessageBox.Show(TextBox1.Text, " in 5 mins")
+        '##old----Label1.Text = Format(TimeOfDay, "HH:mm:ss")
+        Dim t As Date = Label2.Text
+        Dim diff As Integer = DateDiff(DateInterval.Minute, t, TimeOfDay)
+        If diff = 5 Then
+            For z As Integer = 0 To 5
+                Console.Beep()
+            Next
+            MessageBox.Show(TextBox1.Text, " in 5 mins..")
 
-        'End If
+        End If
 
-
-        If (Label1.Text = Label2.Text) Then
-            For x As Integer = 0 To 40
+        If (TimeOfDay = Label2.Text) Then
+            For x As Integer = 0 To 10
                 Console.Beep()
             Next
 
-            MessageBox.Show(TextBox1.Text)
+            MessageBox.Show(TextBox1.Text, " is respawning!")
 
         End If
 
@@ -42,6 +41,8 @@ Public Class Timer
         Dim temp2 As Date
         Dim filename As String = TextBox1.Text
         temp2 = DateAdd(DateInterval.Minute, k, temp)
+        Label1.Text = TimeOfDay.Date
+
         Label2.Text = Format(temp2, "HH:mm:ss")
     End Sub
 
@@ -59,10 +60,10 @@ Public Class Timer
         Else
             If Not System.IO.Directory.Exists(strFolder) Then
                 System.IO.Directory.CreateDirectory(strFolder)
-                IO.File.WriteAllText("C:\users\" + currentuser + "\documents\kobt\" + TextBox1.Text, Label2.Text)
+                IO.File.WriteAllText(strFolder + TextBox1.Text, Label2.Text)
                 MessageBox.Show("Saved as " + TextBox1.Text, "press ok", MessageBoxButtons.OK)
             Else
-                IO.File.WriteAllText("C:\users\" + currentuser + "\documents\kobt\" + TextBox1.Text, Label2.Text)
+                IO.File.WriteAllText(strFolder + TextBox1.Text, Label2.Text)
                 MessageBox.Show("Saved as " + TextBox1.Text, "press ok", MessageBoxButtons.OK)
             End If
 
@@ -70,11 +71,11 @@ Public Class Timer
 
     End Sub
 
-    Private Sub Button4_Click(sender As System.Object, e As System.EventArgs) Handles Button4.Click
-        If OpenFileDialog1.ShowDialog() = System.Windows.Forms.DialogResult.OK Then
-            TextBox1.Text = OpenFileDialog1.SafeFileName
-            Label2.Text = IO.File.ReadAllText(OpenFileDialog1.FileName)
-            MessageBox.Show("Respawn Time is: " + Label2.Text, "Loaded Boss: " + TextBox1.Text, MessageBoxButtons.OK)
-        End If
-    End Sub
+    'Public Sub Button4_Click(sender As System.Object, e As System.EventArgs)
+    ' If OpenFileDialog1.ShowDialog() = System.Windows.Forms.DialogResult.OK Then
+    ' TextBox1.Text = OpenFileDialog1.SafeFileName
+    ' Label2.Text = IO.File.ReadAllText(OpenFileDialog1.FileName)
+    ' MessageBox.Show("Respawn Time is: " + Label2.Text, "Loaded Boss: " + TextBox1.Text, MessageBoxButtons.OK)
+    'End If
+    ' End Sub
 End Class
