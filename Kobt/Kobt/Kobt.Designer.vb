@@ -27,37 +27,47 @@ Partial Class Kobt
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.FileToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.NewToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.SaveToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.LoadMultipleToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ExitToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.EditToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.UndoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.RedoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.toolStripSeparator3 = New System.Windows.Forms.ToolStripSeparator()
+        Me.LOad2ToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.WindowToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ArrangeToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.HorizontalToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.StatusStrip1 = New System.Windows.Forms.StatusStrip()
         Me.ToolStripStatusLabel1 = New System.Windows.Forms.ToolStripStatusLabel()
+        Me.ToolStripStatusLabel2 = New System.Windows.Forms.ToolStripStatusLabel()
+        Me.ToolStripStatusLabel15 = New System.Windows.Forms.ToolStripStatusLabel()
+        Me.ToolStripStatusLabel5 = New System.Windows.Forms.ToolStripStatusLabel()
+        Me.ToolStripStatusLabel4 = New System.Windows.Forms.ToolStripStatusLabel()
+        Me.ToolStripStatusLabel7 = New System.Windows.Forms.ToolStripStatusLabel()
+        Me.ToolStripStatusLabel6 = New System.Windows.Forms.ToolStripStatusLabel()
+        Me.ToolStripStatusLabel10 = New System.Windows.Forms.ToolStripStatusLabel()
+        Me.ToolStripStatusLabel8 = New System.Windows.Forms.ToolStripStatusLabel()
+        Me.ToolStripStatusLabel11 = New System.Windows.Forms.ToolStripStatusLabel()
+        Me.ToolStripStatusLabel9 = New System.Windows.Forms.ToolStripStatusLabel()
+        Me.ToolStripStatusLabel13 = New System.Windows.Forms.ToolStripStatusLabel()
+        Me.ToolStripStatusLabel12 = New System.Windows.Forms.ToolStripStatusLabel()
+        Me.ToolStripStatusLabel3 = New System.Windows.Forms.ToolStripStatusLabel()
+        Me.ToolStripStatusLabel14 = New System.Windows.Forms.ToolStripStatusLabel()
         Me.OpenFileDialog1 = New System.Windows.Forms.OpenFileDialog()
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
+        Me.CloseAllToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1.SuspendLayout()
         Me.StatusStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
         'MenuStrip1
         '
-        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.FileToolStripMenuItem, Me.EditToolStripMenuItem, Me.WindowToolStripMenuItem, Me.ArrangeToolStripMenuItem})
+        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.FileToolStripMenuItem, Me.WindowToolStripMenuItem, Me.ArrangeToolStripMenuItem})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.MdiWindowListItem = Me.WindowToolStripMenuItem
         Me.MenuStrip1.Name = "MenuStrip1"
-        Me.MenuStrip1.Size = New System.Drawing.Size(397, 24)
+        Me.MenuStrip1.Size = New System.Drawing.Size(552, 24)
         Me.MenuStrip1.TabIndex = 1
         Me.MenuStrip1.Text = "MenuStrip1"
         '
         'FileToolStripMenuItem
         '
-        Me.FileToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.NewToolStripMenuItem, Me.SaveToolStripMenuItem, Me.LoadMultipleToolStripMenuItem, Me.ExitToolStripMenuItem})
+        Me.FileToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.NewToolStripMenuItem, Me.LOad2ToolStripMenuItem, Me.CloseAllToolStripMenuItem, Me.ExitToolStripMenuItem})
         Me.FileToolStripMenuItem.Name = "FileToolStripMenuItem"
         Me.FileToolStripMenuItem.Size = New System.Drawing.Size(35, 20)
         Me.FileToolStripMenuItem.Text = "&File"
@@ -71,52 +81,17 @@ Partial Class Kobt
         Me.NewToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.NewToolStripMenuItem.Text = "&New"
         '
-        'SaveToolStripMenuItem
-        '
-        Me.SaveToolStripMenuItem.Image = CType(resources.GetObject("SaveToolStripMenuItem.Image"), System.Drawing.Image)
-        Me.SaveToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.SaveToolStripMenuItem.Name = "SaveToolStripMenuItem"
-        Me.SaveToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.S), System.Windows.Forms.Keys)
-        Me.SaveToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
-        Me.SaveToolStripMenuItem.Text = "&Save"
-        '
-        'LoadMultipleToolStripMenuItem
-        '
-        Me.LoadMultipleToolStripMenuItem.Name = "LoadMultipleToolStripMenuItem"
-        Me.LoadMultipleToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
-        Me.LoadMultipleToolStripMenuItem.Text = "&Load"
-        '
         'ExitToolStripMenuItem
         '
         Me.ExitToolStripMenuItem.Name = "ExitToolStripMenuItem"
         Me.ExitToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.ExitToolStripMenuItem.Text = "E&xit"
         '
-        'EditToolStripMenuItem
+        'LOad2ToolStripMenuItem
         '
-        Me.EditToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.UndoToolStripMenuItem, Me.RedoToolStripMenuItem, Me.toolStripSeparator3})
-        Me.EditToolStripMenuItem.Name = "EditToolStripMenuItem"
-        Me.EditToolStripMenuItem.Size = New System.Drawing.Size(37, 20)
-        Me.EditToolStripMenuItem.Text = "&Edit"
-        '
-        'UndoToolStripMenuItem
-        '
-        Me.UndoToolStripMenuItem.Name = "UndoToolStripMenuItem"
-        Me.UndoToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.Z), System.Windows.Forms.Keys)
-        Me.UndoToolStripMenuItem.Size = New System.Drawing.Size(137, 22)
-        Me.UndoToolStripMenuItem.Text = "&Undo"
-        '
-        'RedoToolStripMenuItem
-        '
-        Me.RedoToolStripMenuItem.Name = "RedoToolStripMenuItem"
-        Me.RedoToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.Y), System.Windows.Forms.Keys)
-        Me.RedoToolStripMenuItem.Size = New System.Drawing.Size(137, 22)
-        Me.RedoToolStripMenuItem.Text = "&Redo"
-        '
-        'toolStripSeparator3
-        '
-        Me.toolStripSeparator3.Name = "toolStripSeparator3"
-        Me.toolStripSeparator3.Size = New System.Drawing.Size(134, 6)
+        Me.LOad2ToolStripMenuItem.Name = "LOad2ToolStripMenuItem"
+        Me.LOad2ToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.LOad2ToolStripMenuItem.Text = "&Load"
         '
         'WindowToolStripMenuItem
         '
@@ -134,15 +109,15 @@ Partial Class Kobt
         'HorizontalToolStripMenuItem
         '
         Me.HorizontalToolStripMenuItem.Name = "HorizontalToolStripMenuItem"
-        Me.HorizontalToolStripMenuItem.Size = New System.Drawing.Size(122, 22)
+        Me.HorizontalToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.HorizontalToolStripMenuItem.Text = "Horizontal"
         '
         'StatusStrip1
         '
-        Me.StatusStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripStatusLabel1})
-        Me.StatusStrip1.Location = New System.Drawing.Point(0, 327)
+        Me.StatusStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripStatusLabel1, Me.ToolStripStatusLabel2, Me.ToolStripStatusLabel15, Me.ToolStripStatusLabel5, Me.ToolStripStatusLabel4, Me.ToolStripStatusLabel7, Me.ToolStripStatusLabel6, Me.ToolStripStatusLabel10, Me.ToolStripStatusLabel8, Me.ToolStripStatusLabel11, Me.ToolStripStatusLabel9, Me.ToolStripStatusLabel13, Me.ToolStripStatusLabel12, Me.ToolStripStatusLabel3, Me.ToolStripStatusLabel14})
+        Me.StatusStrip1.Location = New System.Drawing.Point(0, 306)
         Me.StatusStrip1.Name = "StatusStrip1"
-        Me.StatusStrip1.Size = New System.Drawing.Size(397, 22)
+        Me.StatusStrip1.Size = New System.Drawing.Size(552, 22)
         Me.StatusStrip1.TabIndex = 2
         Me.StatusStrip1.Text = "StatusStrip1"
         '
@@ -152,19 +127,151 @@ Partial Class Kobt
         Me.ToolStripStatusLabel1.Size = New System.Drawing.Size(51, 17)
         Me.ToolStripStatusLabel1.Text = "00:00:00"
         '
+        'ToolStripStatusLabel2
+        '
+        Me.ToolStripStatusLabel2.BackColor = System.Drawing.SystemColors.Desktop
+        Me.ToolStripStatusLabel2.Name = "ToolStripStatusLabel2"
+        Me.ToolStripStatusLabel2.Size = New System.Drawing.Size(0, 17)
+        '
+        'ToolStripStatusLabel15
+        '
+        Me.ToolStripStatusLabel15.Name = "ToolStripStatusLabel15"
+        Me.ToolStripStatusLabel15.Size = New System.Drawing.Size(16, 17)
+        Me.ToolStripStatusLabel15.Text = "   "
+        '
+        'ToolStripStatusLabel5
+        '
+        Me.ToolStripStatusLabel5.AutoSize = False
+        Me.ToolStripStatusLabel5.BackColor = System.Drawing.SystemColors.ControlText
+        Me.ToolStripStatusLabel5.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.None
+        Me.ToolStripStatusLabel5.Font = New System.Drawing.Font("Tahoma", 1.0!)
+        Me.ToolStripStatusLabel5.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
+        Me.ToolStripStatusLabel5.Name = "ToolStripStatusLabel5"
+        Me.ToolStripStatusLabel5.Overflow = System.Windows.Forms.ToolStripItemOverflow.Never
+        Me.ToolStripStatusLabel5.Size = New System.Drawing.Size(9, 17)
+        Me.ToolStripStatusLabel5.Text = "  "
+        Me.ToolStripStatusLabel5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
+        'ToolStripStatusLabel4
+        '
+        Me.ToolStripStatusLabel4.Name = "ToolStripStatusLabel4"
+        Me.ToolStripStatusLabel4.Size = New System.Drawing.Size(47, 17)
+        Me.ToolStripStatusLabel4.Text = "CZ         "
+        '
+        'ToolStripStatusLabel7
+        '
+        Me.ToolStripStatusLabel7.AutoSize = False
+        Me.ToolStripStatusLabel7.BackColor = System.Drawing.Color.DodgerBlue
+        Me.ToolStripStatusLabel7.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.None
+        Me.ToolStripStatusLabel7.Font = New System.Drawing.Font("Tahoma", 1.0!)
+        Me.ToolStripStatusLabel7.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
+        Me.ToolStripStatusLabel7.Name = "ToolStripStatusLabel7"
+        Me.ToolStripStatusLabel7.Overflow = System.Windows.Forms.ToolStripItemOverflow.Never
+        Me.ToolStripStatusLabel7.Size = New System.Drawing.Size(9, 17)
+        Me.ToolStripStatusLabel7.Text = "  "
+        Me.ToolStripStatusLabel7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
+        'ToolStripStatusLabel6
+        '
+        Me.ToolStripStatusLabel6.Name = "ToolStripStatusLabel6"
+        Me.ToolStripStatusLabel6.Size = New System.Drawing.Size(51, 17)
+        Me.ToolStripStatusLabel6.Text = "Eslant     "
+        '
+        'ToolStripStatusLabel10
+        '
+        Me.ToolStripStatusLabel10.AutoSize = False
+        Me.ToolStripStatusLabel10.BackColor = System.Drawing.Color.Firebrick
+        Me.ToolStripStatusLabel10.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.None
+        Me.ToolStripStatusLabel10.Font = New System.Drawing.Font("Tahoma", 1.0!)
+        Me.ToolStripStatusLabel10.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
+        Me.ToolStripStatusLabel10.Name = "ToolStripStatusLabel10"
+        Me.ToolStripStatusLabel10.Overflow = System.Windows.Forms.ToolStripItemOverflow.Never
+        Me.ToolStripStatusLabel10.Size = New System.Drawing.Size(9, 17)
+        Me.ToolStripStatusLabel10.Text = "  "
+        Me.ToolStripStatusLabel10.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
+        'ToolStripStatusLabel8
+        '
+        Me.ToolStripStatusLabel8.Name = "ToolStripStatusLabel8"
+        Me.ToolStripStatusLabel8.Size = New System.Drawing.Size(53, 17)
+        Me.ToolStripStatusLabel8.Text = "Bifrost     "
+        '
+        'ToolStripStatusLabel11
+        '
+        Me.ToolStripStatusLabel11.AutoSize = False
+        Me.ToolStripStatusLabel11.BackColor = System.Drawing.Color.Green
+        Me.ToolStripStatusLabel11.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.None
+        Me.ToolStripStatusLabel11.Font = New System.Drawing.Font("Tahoma", 1.0!)
+        Me.ToolStripStatusLabel11.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
+        Me.ToolStripStatusLabel11.Name = "ToolStripStatusLabel11"
+        Me.ToolStripStatusLabel11.Overflow = System.Windows.Forms.ToolStripItemOverflow.Never
+        Me.ToolStripStatusLabel11.Size = New System.Drawing.Size(9, 17)
+        Me.ToolStripStatusLabel11.Text = "  "
+        Me.ToolStripStatusLabel11.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
+        'ToolStripStatusLabel9
+        '
+        Me.ToolStripStatusLabel9.Name = "ToolStripStatusLabel9"
+        Me.ToolStripStatusLabel9.Size = New System.Drawing.Size(58, 17)
+        Me.ToolStripStatusLabel9.Text = "Moradon   "
+        '
+        'ToolStripStatusLabel13
+        '
+        Me.ToolStripStatusLabel13.AutoSize = False
+        Me.ToolStripStatusLabel13.BackColor = System.Drawing.Color.DarkBlue
+        Me.ToolStripStatusLabel13.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.None
+        Me.ToolStripStatusLabel13.Font = New System.Drawing.Font("Tahoma", 1.0!)
+        Me.ToolStripStatusLabel13.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
+        Me.ToolStripStatusLabel13.Name = "ToolStripStatusLabel13"
+        Me.ToolStripStatusLabel13.Overflow = System.Windows.Forms.ToolStripItemOverflow.Never
+        Me.ToolStripStatusLabel13.Size = New System.Drawing.Size(9, 17)
+        Me.ToolStripStatusLabel13.Text = "  "
+        Me.ToolStripStatusLabel13.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
+        'ToolStripStatusLabel12
+        '
+        Me.ToolStripStatusLabel12.Name = "ToolStripStatusLabel12"
+        Me.ToolStripStatusLabel12.Size = New System.Drawing.Size(51, 17)
+        Me.ToolStripStatusLabel12.Text = "Delos      "
+        '
+        'ToolStripStatusLabel3
+        '
+        Me.ToolStripStatusLabel3.AutoSize = False
+        Me.ToolStripStatusLabel3.BackColor = System.Drawing.Color.Indigo
+        Me.ToolStripStatusLabel3.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.None
+        Me.ToolStripStatusLabel3.Font = New System.Drawing.Font("Tahoma", 1.0!)
+        Me.ToolStripStatusLabel3.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
+        Me.ToolStripStatusLabel3.Name = "ToolStripStatusLabel3"
+        Me.ToolStripStatusLabel3.Overflow = System.Windows.Forms.ToolStripItemOverflow.Never
+        Me.ToolStripStatusLabel3.Size = New System.Drawing.Size(9, 17)
+        Me.ToolStripStatusLabel3.Text = "  "
+        Me.ToolStripStatusLabel3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
+        'ToolStripStatusLabel14
+        '
+        Me.ToolStripStatusLabel14.Name = "ToolStripStatusLabel14"
+        Me.ToolStripStatusLabel14.Size = New System.Drawing.Size(42, 17)
+        Me.ToolStripStatusLabel14.Text = "Krowaz"
+        '
         'OpenFileDialog1
         '
-        Me.OpenFileDialog1.FileName = "OpenFileDialog1"
+        Me.OpenFileDialog1.InitialDirectory = "C:\users\"" Environment.UserName ""\documents\kobt\"
         '
         'Timer1
         '
         Me.Timer1.Interval = 1000
         '
+        'CloseAllToolStripMenuItem
+        '
+        Me.CloseAllToolStripMenuItem.Name = "CloseAllToolStripMenuItem"
+        Me.CloseAllToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.CloseAllToolStripMenuItem.Text = "&Close All"
+        '
         'Kobt
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(397, 349)
+        Me.ClientSize = New System.Drawing.Size(552, 328)
         Me.Controls.Add(Me.StatusStrip1)
         Me.Controls.Add(Me.MenuStrip1)
         Me.IsMdiContainer = True
@@ -183,19 +290,29 @@ Partial Class Kobt
     Friend WithEvents MenuStrip1 As System.Windows.Forms.MenuStrip
     Friend WithEvents FileToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents NewToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
-    Friend WithEvents SaveToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents ExitToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
-    Friend WithEvents EditToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
-    Friend WithEvents UndoToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
-    Friend WithEvents RedoToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
-    Friend WithEvents toolStripSeparator3 As System.Windows.Forms.ToolStripSeparator
     Friend WithEvents StatusStrip1 As System.Windows.Forms.StatusStrip
     Friend WithEvents OpenFileDialog1 As System.Windows.Forms.OpenFileDialog
-    Friend WithEvents LoadMultipleToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents WindowToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents ArrangeToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents HorizontalToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents Timer1 As System.Windows.Forms.Timer
     Public WithEvents ToolStripStatusLabel1 As System.Windows.Forms.ToolStripStatusLabel
+    Friend WithEvents ToolStripStatusLabel2 As System.Windows.Forms.ToolStripStatusLabel
+    Friend WithEvents ToolStripStatusLabel15 As System.Windows.Forms.ToolStripStatusLabel
+    Friend WithEvents ToolStripStatusLabel5 As System.Windows.Forms.ToolStripStatusLabel
+    Friend WithEvents ToolStripStatusLabel4 As System.Windows.Forms.ToolStripStatusLabel
+    Friend WithEvents ToolStripStatusLabel7 As System.Windows.Forms.ToolStripStatusLabel
+    Friend WithEvents ToolStripStatusLabel6 As System.Windows.Forms.ToolStripStatusLabel
+    Friend WithEvents ToolStripStatusLabel10 As System.Windows.Forms.ToolStripStatusLabel
+    Friend WithEvents ToolStripStatusLabel8 As System.Windows.Forms.ToolStripStatusLabel
+    Friend WithEvents ToolStripStatusLabel11 As System.Windows.Forms.ToolStripStatusLabel
+    Friend WithEvents ToolStripStatusLabel9 As System.Windows.Forms.ToolStripStatusLabel
+    Friend WithEvents ToolStripStatusLabel13 As System.Windows.Forms.ToolStripStatusLabel
+    Friend WithEvents ToolStripStatusLabel12 As System.Windows.Forms.ToolStripStatusLabel
+    Friend WithEvents ToolStripStatusLabel3 As System.Windows.Forms.ToolStripStatusLabel
+    Friend WithEvents ToolStripStatusLabel14 As System.Windows.Forms.ToolStripStatusLabel
+    Friend WithEvents LOad2ToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents CloseAllToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
 
 End Class

@@ -28,7 +28,6 @@ Partial Class Boss
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
-        Me.Label4 = New System.Windows.Forms.Label()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
@@ -38,7 +37,7 @@ Partial Class Boss
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Arial Black", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.Color.Lime
-        Me.Label1.Location = New System.Drawing.Point(158, 13)
+        Me.Label1.Location = New System.Drawing.Point(126, 13)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(65, 22)
         Me.Label1.TabIndex = 0
@@ -52,7 +51,7 @@ Partial Class Boss
         Me.Button1.FlatAppearance.BorderColor = System.Drawing.Color.Honeydew
         Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(161, Byte))
         Me.Button1.ForeColor = System.Drawing.Color.Red
-        Me.Button1.Location = New System.Drawing.Point(246, 8)
+        Me.Button1.Location = New System.Drawing.Point(214, 8)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(29, 27)
         Me.Button1.TabIndex = 1
@@ -61,11 +60,12 @@ Partial Class Boss
         '
         'Label2
         '
-        Me.Label2.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Label2.Anchor = CType(((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Arial Black", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.ForeColor = System.Drawing.Color.White
-        Me.Label2.Location = New System.Drawing.Point(12, 13)
+        Me.Label2.Location = New System.Drawing.Point(5, 13)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(65, 22)
         Me.Label2.TabIndex = 2
@@ -77,7 +77,7 @@ Partial Class Boss
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Arial Black", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label3.ForeColor = System.Drawing.Color.White
-        Me.Label3.Location = New System.Drawing.Point(131, 13)
+        Me.Label3.Location = New System.Drawing.Point(99, 13)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(21, 22)
         Me.Label3.TabIndex = 3
@@ -87,23 +87,14 @@ Partial Class Boss
         '
         Me.Timer1.Interval = 1000
         '
-        'Label4
-        '
-        Me.Label4.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(8, 3)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(39, 13)
-        Me.Label4.TabIndex = 4
-        Me.Label4.Text = "Label4"
-        '
         'Button2
         '
         Me.Button2.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Button2.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
         Me.Button2.BackColor = System.Drawing.Color.Lime
+        Me.Button2.Enabled = False
         Me.Button2.ForeColor = System.Drawing.Color.Black
-        Me.Button2.Location = New System.Drawing.Point(16, 3)
+        Me.Button2.Location = New System.Drawing.Point(9, 5)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(10, 10)
         Me.Button2.TabIndex = 5
@@ -115,10 +106,9 @@ Partial Class Boss
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.AutoSize = True
         Me.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
-        Me.BackColor = System.Drawing.SystemColors.ControlText
-        Me.ClientSize = New System.Drawing.Size(287, 53)
+        Me.BackColor = System.Drawing.Color.Black
+        Me.ClientSize = New System.Drawing.Size(255, 53)
         Me.Controls.Add(Me.Button2)
-        Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Button1)
@@ -135,6 +125,5 @@ Partial Class Boss
     Friend WithEvents Label2 As System.Windows.Forms.Label
     Friend WithEvents Label3 As System.Windows.Forms.Label
     Friend WithEvents Timer1 As System.Windows.Forms.Timer
-    Friend WithEvents Label4 As System.Windows.Forms.Label
     Friend WithEvents Button2 As System.Windows.Forms.Button
 End Class
