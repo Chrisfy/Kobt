@@ -2,25 +2,28 @@
     Public Function ReadLine(lineNumber As Integer, lines As List(Of String)) As String
         Return lines(lineNumber - 1)
     End Function
+    Public OvFlag2 As Boolean
 
     Private Sub Kobt_Load(sender As System.Object, e As System.EventArgs) Handles MyBase.Load
         InitializeOpenFileDialog()
         Timer1.Start()
-
-
+        OvFlag2 = False
     End Sub
 
-    Private Sub NewToolStripMenuItem_Click(sender As System.Object, e As System.EventArgs) Handles NewToolStripMenuItem.Click
+    Private Sub NewToolStripMenuItem_Click(sender As System.Object, e As System.EventArgs) Handles NewToolStripMenuItem.Click, NewToolStripButton.Click
         Dim Window As New Timer
         Window.MdiParent = Me
+        OvFlag2 = False
+        ToolStripStatusLabel16.Text = "Set up new timer"
+        Timer2.Start()
         Window.Show()
 
-        
-        
+
+
 
     End Sub
 
-    Private Sub LoadToolStripMenuItem_Click(sender As System.Object, e As System.EventArgs) Handles LOad2ToolStripMenuItem.Click
+    Private Sub LoadToolStripMenuItem_Click(sender As System.Object, e As System.EventArgs) Handles LOad2ToolStripMenuItem.Click, OpenToolStripButton.Click
         If OpenFileDialog1.ShowDialog() = System.Windows.Forms.DialogResult.OK Then
             Dim k As Integer = OpenFileDialog1.FileNames.Count - 1
             For i As Integer = 0 To k
@@ -55,34 +58,15 @@
                 End If
 
 
-        Window.Show()
+                Window.Show()
             Next
             HorizontalToolStripMenuItem.PerformClick()
-            MessageBox.Show("Succes", "Press ok")
+            MessageBox.Show("All files were load succesfully.", "Load Completed", MessageBoxButtons.OK)
 
 
 
         End If
     End Sub
-
-    'Private Sub LoadMultipleToolStripMenuItem_Click(sender As System.Object, e As System.EventArgs)
-    'If OpenFileDialog1.ShowDialog() = System.Windows.Forms.DialogResult.OK Then
-    'Dim k As Integer = OpenFileDialog1.FileNames.Count - 1
-    'For i As Integer = 0 To k
-    'Dim Window As New Boss
-    'Window.MdiParent = Me
-    'Window.Label2.Text = OpenFileDialog1.SafeFileNames(i)
-    'Window.Label1.Text = IO.File.ReadAllText(OpenFileDialog1.FileNames(i))
-    'Window.Text = OpenFileDialog1.SafeFileNames(i)
-    'Dim dt As Date = Window.Label1.Text
-    'Dim dt2 As Date = TimeOfDay
-    ' Window.Show()
-
-    'Next
-    ' MessageBox.Show("Files Load Succesful", "Succes")
-
-    'End If
-    ' End Sub
 
     Public Sub InitializeOpenFileDialog()
         OpenFileDialog1.Filter = "Text Files (*.txt)|*.txt|All Files (*.*)|*.*"
@@ -104,6 +88,8 @@
 
     Private Sub Timer1_Tick(sender As System.Object, e As System.EventArgs) Handles Timer1.Tick
         ToolStripStatusLabel1.Text = Format(TimeOfDay, "HH:mm:ss")
+        ToolStripStatusLabel17.Text = MdiChildren.Count
+
     End Sub
 
     Private Sub CloseAllToolStripMenuItem_Click(sender As System.Object, e As System.EventArgs) Handles CloseAllToolStripMenuItem.Click
@@ -113,4 +99,8 @@
     End Sub
 
    
+    Private Sub Timer2_Tick(sender As System.Object, e As System.EventArgs) Handles Timer2.Tick
+        ToolStripStatusLabel16.Text = "Status "
+        Timer2.Stop()
+    End Sub
 End Class

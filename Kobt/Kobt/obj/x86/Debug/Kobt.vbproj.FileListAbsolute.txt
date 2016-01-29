@@ -33,6 +33,8 @@ C:\Users\Chris\Documents\GitHub\Kobt\Kobt\Kobt\bin\Debug\Kobt.application
 C:\Users\Chris\Documents\GitHub\Kobt\Kobt\Kobt\bin\Debug\Kobt.exe
 C:\Users\Chris\Documents\GitHub\Kobt\Kobt\Kobt\bin\Debug\Kobt.pdb
 C:\Users\Chris\Documents\GitHub\Kobt\Kobt\Kobt\bin\Debug\Kobt.xml
+C:\Users\Chris\Documents\GitHub\Kobt\Kobt\Kobt\bin\Debug\Microsoft.VisualBasic.PowerPacks.Vs.dll
+C:\Users\Chris\Documents\GitHub\Kobt\Kobt\Kobt\bin\Debug\Microsoft.VisualBasic.PowerPacks.Vs.xml
 C:\Users\Chris\Documents\GitHub\Kobt\Kobt\Kobt\obj\x86\Debug\Kobt.Boss.resources
 C:\Users\Chris\Documents\GitHub\Kobt\Kobt\Kobt\obj\x86\Debug\Kobt.Kobt.resources
 C:\Users\Chris\Documents\GitHub\Kobt\Kobt\Kobt\obj\x86\Debug\Kobt.Resources.resources

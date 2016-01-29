@@ -23,6 +23,7 @@ Partial Class Timer
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Timer))
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.NumericUpDown1 = New System.Windows.Forms.NumericUpDown()
@@ -33,7 +34,6 @@ Partial Class Timer
         Me.Label5 = New System.Windows.Forms.Label()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.Label6 = New System.Windows.Forms.Label()
-        Me.Button3 = New System.Windows.Forms.Button()
         Me.OpenFileDialog1 = New System.Windows.Forms.OpenFileDialog()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
@@ -68,32 +68,30 @@ Partial Class Timer
         Me.NumericUpDown1.Location = New System.Drawing.Point(119, 39)
         Me.NumericUpDown1.Name = "NumericUpDown1"
         Me.NumericUpDown1.Size = New System.Drawing.Size(36, 20)
-        Me.NumericUpDown1.TabIndex = 4
+        Me.NumericUpDown1.TabIndex = 2
         '
         'NumericUpDown2
         '
         Me.NumericUpDown2.Location = New System.Drawing.Point(163, 39)
         Me.NumericUpDown2.Name = "NumericUpDown2"
         Me.NumericUpDown2.Size = New System.Drawing.Size(36, 20)
-        Me.NumericUpDown2.TabIndex = 5
+        Me.NumericUpDown2.TabIndex = 3
         '
         'Button1
         '
-        Me.Button1.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Button1.Location = New System.Drawing.Point(16, 153)
+        Me.Button1.Location = New System.Drawing.Point(16, 154)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(198, 23)
-        Me.Button1.TabIndex = 6
-        Me.Button1.Text = "Set"
+        Me.Button1.TabIndex = 5
+        Me.Button1.Text = "Save && Set"
         Me.Button1.UseVisualStyleBackColor = True
         '
         'Button2
         '
-        Me.Button2.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Button2.Location = New System.Drawing.Point(16, 182)
+        Me.Button2.Location = New System.Drawing.Point(16, 183)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(198, 23)
-        Me.Button2.TabIndex = 7
+        Me.Button2.TabIndex = 6
         Me.Button2.Text = "Cancel"
         Me.Button2.UseVisualStyleBackColor = True
         '
@@ -115,7 +113,7 @@ Partial Class Timer
         Me.TextBox1.Location = New System.Drawing.Point(119, 11)
         Me.TextBox1.Name = "TextBox1"
         Me.TextBox1.Size = New System.Drawing.Size(80, 20)
-        Me.TextBox1.TabIndex = 9
+        Me.TextBox1.TabIndex = 1
         '
         'Label6
         '
@@ -125,16 +123,6 @@ Partial Class Timer
         Me.Label6.Size = New System.Drawing.Size(64, 13)
         Me.Label6.TabIndex = 10
         Me.Label6.Text = "Boss Name:"
-        '
-        'Button3
-        '
-        Me.Button3.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Button3.Location = New System.Drawing.Point(16, 211)
-        Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(200, 23)
-        Me.Button3.TabIndex = 11
-        Me.Button3.Text = "Save"
-        Me.Button3.UseVisualStyleBackColor = True
         '
         'OpenFileDialog1
         '
@@ -175,18 +163,17 @@ Partial Class Timer
         Me.ComboBox1.Location = New System.Drawing.Point(117, 119)
         Me.ComboBox1.Name = "ComboBox1"
         Me.ComboBox1.Size = New System.Drawing.Size(82, 21)
-        Me.ComboBox1.TabIndex = 15
+        Me.ComboBox1.TabIndex = 4
         '
         'Timer
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(226, 242)
+        Me.ClientSize = New System.Drawing.Size(226, 218)
         Me.Controls.Add(Me.ComboBox1)
         Me.Controls.Add(Me.Label7)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.Label1)
-        Me.Controls.Add(Me.Button3)
         Me.Controls.Add(Me.Label6)
         Me.Controls.Add(Me.TextBox1)
         Me.Controls.Add(Me.Label5)
@@ -197,6 +184,7 @@ Partial Class Timer
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label2)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "Timer"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Timer"
@@ -216,7 +204,6 @@ Partial Class Timer
     Friend WithEvents Label5 As System.Windows.Forms.Label
     Friend WithEvents TextBox1 As System.Windows.Forms.TextBox
     Friend WithEvents Label6 As System.Windows.Forms.Label
-    Friend WithEvents Button3 As System.Windows.Forms.Button
     Friend WithEvents OpenFileDialog1 As System.Windows.Forms.OpenFileDialog
     Friend WithEvents Label1 As System.Windows.Forms.Label
     Friend WithEvents Label4 As System.Windows.Forms.Label

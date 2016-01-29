@@ -1,17 +1,19 @@
 ﻿Public Class Boss
-
     Private Sub Button1_Click(sender As System.Object, e As System.EventArgs) Handles Button1.Click
         Dim backtimer As New Timer
+        Kobt.ToolStripStatusLabel16.Text = "Reset timer"
+        Kobt.Timer2.Start()
         backtimer.MdiParent = Kobt
         backtimer.TextBox1.Text = Me.Label2.Text
         backtimer.Label2.Text = Me.Label1.Text
         backtimer.Text = Label2.Text
         Me.Close()
         backtimer.Show()
-
+        
     End Sub
 
     Private Sub Boss_Load(sender As System.Object, e As System.EventArgs) Handles MyBase.Load
+        Kobt.OvFlag2 = True
         MdiParent = Kobt
         Timer1.Start()
     End Sub
@@ -55,8 +57,13 @@
             System.Globalization.DateTimeFormatInfo.InvariantInfo)
         If DateDiff(DateInterval.Day, Date.Now, dDiff) <= -1 Then
             Button2.BackColor = Color.Red
+            Button2.ForeColor = Color.Red
 
         End If
 
+    End Sub
+
+    Private Sub Button2_Click(sender As System.Object, e As System.EventArgs) Handles Button2.Click
+        MessageBox.Show("Killed on " + Button2.Text, "Date Killed", MessageBoxButtons.OK, MessageBoxIcon.Information)
     End Sub
 End Class

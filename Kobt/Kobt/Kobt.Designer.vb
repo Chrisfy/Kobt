@@ -27,13 +27,14 @@ Partial Class Kobt
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.FileToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.NewToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ExitToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.LOad2ToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.CloseAllToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ExitToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.WindowToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ArrangeToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.HorizontalToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.StatusStrip1 = New System.Windows.Forms.StatusStrip()
-        Me.ToolStripStatusLabel1 = New System.Windows.Forms.ToolStripStatusLabel()
+        Me.ToolStripStatusLabel16 = New System.Windows.Forms.ToolStripStatusLabel()
         Me.ToolStripStatusLabel2 = New System.Windows.Forms.ToolStripStatusLabel()
         Me.ToolStripStatusLabel15 = New System.Windows.Forms.ToolStripStatusLabel()
         Me.ToolStripStatusLabel5 = New System.Windows.Forms.ToolStripStatusLabel()
@@ -48,11 +49,18 @@ Partial Class Kobt
         Me.ToolStripStatusLabel12 = New System.Windows.Forms.ToolStripStatusLabel()
         Me.ToolStripStatusLabel3 = New System.Windows.Forms.ToolStripStatusLabel()
         Me.ToolStripStatusLabel14 = New System.Windows.Forms.ToolStripStatusLabel()
+        Me.ToolStripStatusLabel1 = New System.Windows.Forms.ToolStripStatusLabel()
         Me.OpenFileDialog1 = New System.Windows.Forms.OpenFileDialog()
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
-        Me.CloseAllToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ToolStripStatusLabel17 = New System.Windows.Forms.ToolStripStatusLabel()
+        Me.Timer2 = New System.Windows.Forms.Timer(Me.components)
+        Me.ToolStrip1 = New System.Windows.Forms.ToolStrip()
+        Me.NewToolStripButton = New System.Windows.Forms.ToolStripButton()
+        Me.OpenToolStripButton = New System.Windows.Forms.ToolStripButton()
+        Me.HelpToolStripButton = New System.Windows.Forms.ToolStripButton()
         Me.MenuStrip1.SuspendLayout()
         Me.StatusStrip1.SuspendLayout()
+        Me.ToolStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
         'MenuStrip1
@@ -61,7 +69,7 @@ Partial Class Kobt
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.MdiWindowListItem = Me.WindowToolStripMenuItem
         Me.MenuStrip1.Name = "MenuStrip1"
-        Me.MenuStrip1.Size = New System.Drawing.Size(552, 24)
+        Me.MenuStrip1.Size = New System.Drawing.Size(797, 24)
         Me.MenuStrip1.TabIndex = 1
         Me.MenuStrip1.Text = "MenuStrip1"
         '
@@ -78,20 +86,26 @@ Partial Class Kobt
         Me.NewToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.NewToolStripMenuItem.Name = "NewToolStripMenuItem"
         Me.NewToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.N), System.Windows.Forms.Keys)
-        Me.NewToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.NewToolStripMenuItem.Size = New System.Drawing.Size(134, 22)
         Me.NewToolStripMenuItem.Text = "&New"
-        '
-        'ExitToolStripMenuItem
-        '
-        Me.ExitToolStripMenuItem.Name = "ExitToolStripMenuItem"
-        Me.ExitToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
-        Me.ExitToolStripMenuItem.Text = "E&xit"
         '
         'LOad2ToolStripMenuItem
         '
         Me.LOad2ToolStripMenuItem.Name = "LOad2ToolStripMenuItem"
-        Me.LOad2ToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.LOad2ToolStripMenuItem.Size = New System.Drawing.Size(134, 22)
         Me.LOad2ToolStripMenuItem.Text = "&Load"
+        '
+        'CloseAllToolStripMenuItem
+        '
+        Me.CloseAllToolStripMenuItem.Name = "CloseAllToolStripMenuItem"
+        Me.CloseAllToolStripMenuItem.Size = New System.Drawing.Size(134, 22)
+        Me.CloseAllToolStripMenuItem.Text = "&Close All"
+        '
+        'ExitToolStripMenuItem
+        '
+        Me.ExitToolStripMenuItem.Name = "ExitToolStripMenuItem"
+        Me.ExitToolStripMenuItem.Size = New System.Drawing.Size(134, 22)
+        Me.ExitToolStripMenuItem.Text = "E&xit"
         '
         'WindowToolStripMenuItem
         '
@@ -109,23 +123,24 @@ Partial Class Kobt
         'HorizontalToolStripMenuItem
         '
         Me.HorizontalToolStripMenuItem.Name = "HorizontalToolStripMenuItem"
-        Me.HorizontalToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.HorizontalToolStripMenuItem.Size = New System.Drawing.Size(122, 22)
         Me.HorizontalToolStripMenuItem.Text = "Horizontal"
         '
         'StatusStrip1
         '
-        Me.StatusStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripStatusLabel1, Me.ToolStripStatusLabel2, Me.ToolStripStatusLabel15, Me.ToolStripStatusLabel5, Me.ToolStripStatusLabel4, Me.ToolStripStatusLabel7, Me.ToolStripStatusLabel6, Me.ToolStripStatusLabel10, Me.ToolStripStatusLabel8, Me.ToolStripStatusLabel11, Me.ToolStripStatusLabel9, Me.ToolStripStatusLabel13, Me.ToolStripStatusLabel12, Me.ToolStripStatusLabel3, Me.ToolStripStatusLabel14})
+        Me.StatusStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripStatusLabel16, Me.ToolStripStatusLabel2, Me.ToolStripStatusLabel15, Me.ToolStripStatusLabel5, Me.ToolStripStatusLabel4, Me.ToolStripStatusLabel7, Me.ToolStripStatusLabel6, Me.ToolStripStatusLabel10, Me.ToolStripStatusLabel8, Me.ToolStripStatusLabel11, Me.ToolStripStatusLabel9, Me.ToolStripStatusLabel13, Me.ToolStripStatusLabel12, Me.ToolStripStatusLabel3, Me.ToolStripStatusLabel14, Me.ToolStripStatusLabel17, Me.ToolStripStatusLabel1})
         Me.StatusStrip1.Location = New System.Drawing.Point(0, 306)
         Me.StatusStrip1.Name = "StatusStrip1"
-        Me.StatusStrip1.Size = New System.Drawing.Size(552, 22)
+        Me.StatusStrip1.Size = New System.Drawing.Size(797, 22)
         Me.StatusStrip1.TabIndex = 2
         Me.StatusStrip1.Text = "StatusStrip1"
         '
-        'ToolStripStatusLabel1
+        'ToolStripStatusLabel16
         '
-        Me.ToolStripStatusLabel1.Name = "ToolStripStatusLabel1"
-        Me.ToolStripStatusLabel1.Size = New System.Drawing.Size(51, 17)
-        Me.ToolStripStatusLabel1.Text = "00:00:00"
+        Me.ToolStripStatusLabel16.Name = "ToolStripStatusLabel16"
+        Me.ToolStripStatusLabel16.Padding = New System.Windows.Forms.Padding(0, 0, 50, 0)
+        Me.ToolStripStatusLabel16.Size = New System.Drawing.Size(88, 17)
+        Me.ToolStripStatusLabel16.Text = "Status"
         '
         'ToolStripStatusLabel2
         '
@@ -253,6 +268,12 @@ Partial Class Kobt
         Me.ToolStripStatusLabel14.Size = New System.Drawing.Size(42, 17)
         Me.ToolStripStatusLabel14.Text = "Krowaz"
         '
+        'ToolStripStatusLabel1
+        '
+        Me.ToolStripStatusLabel1.Name = "ToolStripStatusLabel1"
+        Me.ToolStripStatusLabel1.Size = New System.Drawing.Size(51, 17)
+        Me.ToolStripStatusLabel1.Text = "00:00:00"
+        '
         'OpenFileDialog1
         '
         Me.OpenFileDialog1.InitialDirectory = "C:\users\"" Environment.UserName ""\documents\kobt\"
@@ -261,28 +282,73 @@ Partial Class Kobt
         '
         Me.Timer1.Interval = 1000
         '
-        'CloseAllToolStripMenuItem
+        'ToolStripStatusLabel17
         '
-        Me.CloseAllToolStripMenuItem.Name = "CloseAllToolStripMenuItem"
-        Me.CloseAllToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
-        Me.CloseAllToolStripMenuItem.Text = "&Close All"
+        Me.ToolStripStatusLabel17.Name = "ToolStripStatusLabel17"
+        Me.ToolStripStatusLabel17.Size = New System.Drawing.Size(242, 17)
+        Me.ToolStripStatusLabel17.Spring = True
+        Me.ToolStripStatusLabel17.Text = "0"
+        '
+        'Timer2
+        '
+        Me.Timer2.Interval = 5000
+        '
+        'ToolStrip1
+        '
+        Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.NewToolStripButton, Me.OpenToolStripButton, Me.HelpToolStripButton})
+        Me.ToolStrip1.Location = New System.Drawing.Point(0, 24)
+        Me.ToolStrip1.Name = "ToolStrip1"
+        Me.ToolStrip1.Size = New System.Drawing.Size(797, 25)
+        Me.ToolStrip1.TabIndex = 4
+        Me.ToolStrip1.Text = "ToolStrip1"
+        '
+        'NewToolStripButton
+        '
+        Me.NewToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.NewToolStripButton.Image = CType(resources.GetObject("NewToolStripButton.Image"), System.Drawing.Image)
+        Me.NewToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.NewToolStripButton.Name = "NewToolStripButton"
+        Me.NewToolStripButton.Size = New System.Drawing.Size(23, 22)
+        Me.NewToolStripButton.Text = "&New"
+        '
+        'OpenToolStripButton
+        '
+        Me.OpenToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.OpenToolStripButton.Image = CType(resources.GetObject("OpenToolStripButton.Image"), System.Drawing.Image)
+        Me.OpenToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.OpenToolStripButton.Name = "OpenToolStripButton"
+        Me.OpenToolStripButton.Size = New System.Drawing.Size(23, 22)
+        Me.OpenToolStripButton.Text = "&Open"
+        '
+        'HelpToolStripButton
+        '
+        Me.HelpToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.HelpToolStripButton.Image = CType(resources.GetObject("HelpToolStripButton.Image"), System.Drawing.Image)
+        Me.HelpToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.HelpToolStripButton.Name = "HelpToolStripButton"
+        Me.HelpToolStripButton.Size = New System.Drawing.Size(23, 22)
+        Me.HelpToolStripButton.Text = "He&lp"
         '
         'Kobt
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(552, 328)
+        Me.ClientSize = New System.Drawing.Size(797, 328)
+        Me.Controls.Add(Me.ToolStrip1)
         Me.Controls.Add(Me.StatusStrip1)
         Me.Controls.Add(Me.MenuStrip1)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.IsMdiContainer = True
         Me.MainMenuStrip = Me.MenuStrip1
         Me.Name = "Kobt"
-        Me.Text = "Knight Online Boss Timers"
+        Me.Text = "  Knight Online Boss Timers"
         Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         Me.MenuStrip1.ResumeLayout(False)
         Me.MenuStrip1.PerformLayout()
         Me.StatusStrip1.ResumeLayout(False)
         Me.StatusStrip1.PerformLayout()
+        Me.ToolStrip1.ResumeLayout(False)
+        Me.ToolStrip1.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -314,5 +380,12 @@ Partial Class Kobt
     Friend WithEvents ToolStripStatusLabel14 As System.Windows.Forms.ToolStripStatusLabel
     Friend WithEvents LOad2ToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents CloseAllToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents ToolStripStatusLabel16 As System.Windows.Forms.ToolStripStatusLabel
+    Friend WithEvents ToolStripStatusLabel17 As System.Windows.Forms.ToolStripStatusLabel
+    Friend WithEvents Timer2 As System.Windows.Forms.Timer
+    Friend WithEvents ToolStrip1 As System.Windows.Forms.ToolStrip
+    Friend WithEvents NewToolStripButton As System.Windows.Forms.ToolStripButton
+    Friend WithEvents OpenToolStripButton As System.Windows.Forms.ToolStripButton
+    Friend WithEvents HelpToolStripButton As System.Windows.Forms.ToolStripButton
 
 End Class
