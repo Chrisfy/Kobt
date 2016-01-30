@@ -34,7 +34,6 @@ Partial Class Timer
         Me.Label5 = New System.Windows.Forms.Label()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.Label6 = New System.Windows.Forms.Label()
-        Me.OpenFileDialog1 = New System.Windows.Forms.OpenFileDialog()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label7 = New System.Windows.Forms.Label()
@@ -72,7 +71,7 @@ Partial Class Timer
         '
         'NumericUpDown2
         '
-        Me.NumericUpDown2.Location = New System.Drawing.Point(163, 39)
+        Me.NumericUpDown2.Location = New System.Drawing.Point(163, 40)
         Me.NumericUpDown2.Name = "NumericUpDown2"
         Me.NumericUpDown2.Size = New System.Drawing.Size(36, 20)
         Me.NumericUpDown2.TabIndex = 3
@@ -92,7 +91,7 @@ Partial Class Timer
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(198, 23)
         Me.Button2.TabIndex = 6
-        Me.Button2.Text = "Cancel"
+        Me.Button2.Text = "Reset"
         Me.Button2.UseVisualStyleBackColor = True
         '
         'Timer1
@@ -123,10 +122,6 @@ Partial Class Timer
         Me.Label6.Size = New System.Drawing.Size(64, 13)
         Me.Label6.TabIndex = 10
         Me.Label6.Text = "Boss Name:"
-        '
-        'OpenFileDialog1
-        '
-        Me.OpenFileDialog1.FileName = "OpenFileDialog1"
         '
         'Label1
         '
@@ -204,7 +199,6 @@ Partial Class Timer
     Friend WithEvents Label5 As System.Windows.Forms.Label
     Friend WithEvents TextBox1 As System.Windows.Forms.TextBox
     Friend WithEvents Label6 As System.Windows.Forms.Label
-    Friend WithEvents OpenFileDialog1 As System.Windows.Forms.OpenFileDialog
     Friend WithEvents Label1 As System.Windows.Forms.Label
     Friend WithEvents Label4 As System.Windows.Forms.Label
     Friend WithEvents Label7 As System.Windows.Forms.Label

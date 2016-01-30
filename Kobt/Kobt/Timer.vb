@@ -9,12 +9,12 @@ Public Class Timer
 
     Private Sub Timer_Load(sender As System.Object, e As System.EventArgs) Handles MyBase.Load
         MdiParent = Kobt
+        Label1.Text = Format(Now(), "short date")
         OvFlag = Kobt.OvFlag2
-        Timer1.Start()
     End Sub
 
     Private Sub Timer1_Tick(sender As System.Object, e As System.EventArgs) Handles Timer1.Tick
-        Label1.Text = Date.Now.ToString("dd/MM/yyyy")
+
 
 
     End Sub
@@ -51,6 +51,8 @@ Public Class Timer
                 sw.WriteLine(Label2.Text)
                 sw.WriteLine(Label1.Text)
                 sw.WriteLine(ind)
+                sw.WriteLine(NumericUpDown1.Value)
+                sw.WriteLine(NumericUpDown2.Value)
                 SaveFlag = True
                 Kobt.ToolStripStatusLabel16.Text = "Saved as " + TextBox1.Text
                 Kobt.Timer2.Start()
@@ -67,6 +69,8 @@ Public Class Timer
                     sw.WriteLine(Label2.Text)
                     sw.WriteLine(Label1.Text)
                     sw.WriteLine(ind)
+                    sw.WriteLine(NumericUpDown1.Value)
+                    sw.WriteLine(NumericUpDown2.Value)
                     SaveFlag = True
                     Kobt.ToolStripStatusLabel16.Text = "Saved as " + TextBox1.Text
                     Kobt.Timer2.Start()
@@ -83,6 +87,8 @@ Public Class Timer
                 sw.WriteLine(Label2.Text)
                 sw.WriteLine(Label1.Text)
                 sw.WriteLine(ind)
+                sw.WriteLine(NumericUpDown1.Value)
+                sw.WriteLine(NumericUpDown2.Value)
                 SaveFlag = True
                 Kobt.ToolStripStatusLabel16.Text = "Saved as " + TextBox1.Text
                 Kobt.Timer2.Start()
@@ -106,6 +112,9 @@ Public Class Timer
             tray.Label1.Text = Format(traytime, "HH:mm:ss")
             tray.Text = Me.TextBox1.Text
             tray.Button2.Text = Me.Label1.Text
+            tray.Label4.Text = NumericUpDown1.Value
+            tray.Label5.Text = NumericUpDown2.Value
+            tray.Label6.Text = ComboBox1.SelectedIndex
             If ComboBox1.SelectedIndex() = 1 Then
                 tray.BackColor = Color.DodgerBlue
             ElseIf ComboBox1.SelectedIndex() = 2 Then
@@ -128,27 +137,4 @@ Public Class Timer
     Private Sub Button2_Click(sender As System.Object, e As System.EventArgs) Handles Button2.Click
         Label2.Text = "00:00:00"
     End Sub
-
-    Private Sub Button3_Click_1(sender As Object, e As EventArgs)
-        Dim currentuser As String = Environment.UserName
-        Dim strFolder = "C:\users\" + currentuser + "\documents\kobt\"
-        If String.IsNullOrEmpty(TextBox1.Text) Then
-            MessageBox.Show("Boss Name can't be empty!", "Empty Boss Name", MessageBoxButtons.OK)
-        ElseIf String.IsNullOrWhiteSpace(TextBox1.Text) Then
-            MessageBox.Show("Boss Name can't be Space!", "Space as Boss Name", MessageBoxButtons.OK)
-        Else
-            If Not System.IO.Directory.Exists(strFolder) Then
-                System.IO.Directory.CreateDirectory(strFolder)
-                Using sw As StreamWriter = New StreamWriter(TextBox1.Text)
-
-                End Using
-                IO.File.WriteAllText(strFolder + TextBox1.Text, Label2.Text)
-            Else
-                IO.File.WriteAllText(strFolder + TextBox1.Text, Label2.Text)
-            End If
-
-        End If
-
-    End Sub
-
 End Class
